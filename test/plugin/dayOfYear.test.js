@@ -22,6 +22,10 @@ it('DayOfYear get', () => {
   expect(dayjs('2015-12-31T00:00:00.000').dayOfYear()).toBe(365)
 })
 
+it('DayOfYear get leap day', () => {
+  expect(dayjs('2024-02-29T00:00:00.000').dayOfYear()).toBe(60)
+})
+
 it('DayOfYear set', () => {
   expect(dayjs().dayOfYear(4).dayOfYear()).toBe(moment().dayOfYear(4).dayOfYear())
   expect(dayjs('2015-01-01T00:00:00.000Z')
